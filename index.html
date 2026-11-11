@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>.</title>
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+body {
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frown {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: 700;
+  font-size: 20vw;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+.label {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  color: #666;
+  text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+<a class="wrap" target="_blank" rel="noopener noreferrer" draggable="false">
+<span class="frown">:(</span>
+<span class="label">not found</span>
+</a>
+<script>
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('dragstart', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'F12') e.preventDefault();
+  if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) e.preventDefault();
+  if (e.ctrlKey && e.key === 'u') e.preventDefault();
+  if (e.metaKey && e.altKey && e.key === 'I') e.preventDefault();
+});
+</script>
+</body>
+</html>
